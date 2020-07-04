@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Jul  4 15:42:34 2020
+
+@author: gabrielochoa
+"""
+import math
+
+
+num_of_people = int(input("How many people will be sharing the pizza? \n >>>"))
+
+slices_per_person = int(input("How many slices will each person be having? \n >>>"))
+
+varSlicePerPizza = 6
+
+minPizzaCount = math.ceil(((num_of_people* slices_per_person)/varSlicePerPizza))
+
+totalSlice = (minPizzaCount*6) - (num_of_people* slices_per_person)
+
+print("The minimum # of pizzas you should order is ", minPizzaCount)
+
+print("There will be ", totalSlice, "slices left!" )
